@@ -31,7 +31,9 @@ var indexConfig = Object.assign({}, config, {
 var modelsConfig = Object.assign({}, config,{
     mode: 'development',
     entry: {
-        model: "./src/js/models/AdModel.js"
+        impresions_model: "./src/js/models/impresions_model.js",
+        revenue_model: "./src/js/models/revenue_model.js",
+        visits_model: "./src/js/models/visits_model.js",
     },
     output: {
         path: path.resolve(__dirname, "public/js/models"),
@@ -39,33 +41,6 @@ var modelsConfig = Object.assign({}, config,{
     },
 });
 
-// Return Array of Configurations
 module.exports = [
-    indexConfig, modelsConfig,
+    indexConfig, modelsConfig
 ];
-
-// module.exports = {
-//     mode: 'development',
-//     entry: {
-//         index: "./src/js/index.js",
-//         model: "./src/models/AdModel.js"
-//     },
-//     output: {
-//         path: path.resolve(__dirname, "public/js"),
-//         filename: "[name].js"
-//     },
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.js$/,
-//                 exclude: /(node_modules)/,
-//                 use: {
-//                     loader: "babel-loader",
-//                     options: {
-//                     presets: ["babel-preset-env"]
-//                     }
-//                 }
-//             }
-//         ]
-//     }
-// };

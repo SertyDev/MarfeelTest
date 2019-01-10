@@ -81,20 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/models/AdModel.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/models/impresions_model.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/models/AdModel.js":
-/*!**********************************!*\
-  !*** ./src/js/models/AdModel.js ***!
-  \**********************************/
+/***/ "./src/js/models/impresions_model.js":
+/*!*******************************************!*\
+  !*** ./src/js/models/impresions_model.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n// A base class is defined using the new reserved 'class' keyword\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar AdModel = function () {\n  // ..and an (optional) custom class constructor. If one is\n  // not supplied, a default constructor is used instead:\n  // constructor() { }\n  function AdModel(name) {\n    _classCallCheck(this, AdModel);\n\n    this.name = name;\n  }\n\n  // Simple class instance methods using short-hand method\n  // declaration\n\n\n  _createClass(AdModel, [{\n    key: 'consoleName',\n    value: function consoleName() {\n      console.log('Name of the Ad: ' + this.name + '.');\n    }\n\n    // We will look at static and subclassed methods shortly\n\n  }]);\n\n  return AdModel;\n}();\n\nexports.default = AdModel;\n\n//# sourceURL=webpack:///./src/js/models/AdModel.js?");
+eval("\n\n//# sourceURL=webpack:///./src/js/models/impresions_model.js?");
 
 /***/ })
 

@@ -353,31 +353,55 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n\nvar _AdModel = __webpack_require__(/*! ../models/AdModel */ \"./src/js/models/AdModel.js\");\n\nvar _AdModel2 = _interopRequireDefault(_AdModel);\n\nvar _firebase = __webpack_require__(/*! ../config/_firebase */ \"./src/js/config/_firebase.js\");\n\nvar _firebase2 = _interopRequireDefault(_firebase);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// let p = new AdModel(\"Ad1\");\n// p.consoleName();\n// console.log('The name of the Ad is: ' + p.name);\n\n_firebase2.default.database().ref('AdsRepo').once('value').then(function (adsDB) {\n    console.log(JSON.stringify(adsDB));\n    console.log();\n});\n\n//# sourceURL=webpack:///./src/js/app/index.js?");
+eval("\n\n\nvar _firebase_config = __webpack_require__(/*! ../config/_firebase_config */ \"./src/js/config/_firebase_config.js\");\n\nvar _firebase_config2 = _interopRequireDefault(_firebase_config);\n\nvar _impresions_model = __webpack_require__(/*! ../models/impresions_model */ \"./src/js/models/impresions_model.js\");\n\nvar _impresions_model2 = _interopRequireDefault(_impresions_model);\n\nvar _revenue_model = __webpack_require__(/*! ../models/revenue_model */ \"./src/js/models/revenue_model.js\");\n\nvar _revenue_model2 = _interopRequireDefault(_revenue_model);\n\nvar _visits_model = __webpack_require__(/*! ../models/visits_model */ \"./src/js/models/visits_model.js\");\n\nvar _visits_model2 = _interopRequireDefault(_visits_model);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_firebase_config2.default.database().ref('AdsRepo').once('value').then(function (adsDB) {\n    console.log(JSON.stringify(adsDB));\n});\n\n//# sourceURL=webpack:///./src/js/app/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/config/_firebase.js":
-/*!************************************!*\
-  !*** ./src/js/config/_firebase.js ***!
-  \************************************/
+/***/ "./src/js/config/_firebase_config.js":
+/*!*******************************************!*\
+  !*** ./src/js/config/_firebase_config.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _firebase = __webpack_require__(/*! firebase */ \"./node_modules/firebase/dist/index.cjs.js\");\n\nvar firebase = _interopRequireWildcard(_firebase);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\n// Initialize Firebase\nvar config = {\n    apiKey: \"AIzaSyD82HmEhIH2z31kRDYkNhPZt6uRl22irAQ\",\n    authDomain: \"adstest-eb240.firebaseapp.com\",\n    databaseURL: \"https://adstest-eb240.firebaseio.com\",\n    projectId: \"adstest-eb240\",\n    storageBucket: \"adstest-eb240.appspot.com\",\n    messagingSenderId: \"139701461811\"\n};\nvar fire = firebase.initializeApp(config);\n\nexports.default = fire;\n\n//# sourceURL=webpack:///./src/js/config/_firebase.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _firebase = __webpack_require__(/*! firebase */ \"./node_modules/firebase/dist/index.cjs.js\");\n\nvar firebase = _interopRequireWildcard(_firebase);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\n// Initialize Firebase\nvar config = {\n    apiKey: \"AIzaSyD82HmEhIH2z31kRDYkNhPZt6uRl22irAQ\",\n    authDomain: \"adstest-eb240.firebaseapp.com\",\n    databaseURL: \"https://adstest-eb240.firebaseio.com\",\n    projectId: \"adstest-eb240\",\n    storageBucket: \"adstest-eb240.appspot.com\",\n    messagingSenderId: \"139701461811\"\n};\nvar fire = firebase.initializeApp(config);\n\nexports.default = fire;\n\n//# sourceURL=webpack:///./src/js/config/_firebase_config.js?");
 
 /***/ }),
 
-/***/ "./src/js/models/AdModel.js":
-/*!**********************************!*\
-  !*** ./src/js/models/AdModel.js ***!
-  \**********************************/
+/***/ "./src/js/models/impresions_model.js":
+/*!*******************************************!*\
+  !*** ./src/js/models/impresions_model.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n// A base class is defined using the new reserved 'class' keyword\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar AdModel = function () {\n  // ..and an (optional) custom class constructor. If one is\n  // not supplied, a default constructor is used instead:\n  // constructor() { }\n  function AdModel(name) {\n    _classCallCheck(this, AdModel);\n\n    this.name = name;\n  }\n\n  // Simple class instance methods using short-hand method\n  // declaration\n\n\n  _createClass(AdModel, [{\n    key: 'consoleName',\n    value: function consoleName() {\n      console.log('Name of the Ad: ' + this.name + '.');\n    }\n\n    // We will look at static and subclassed methods shortly\n\n  }]);\n\n  return AdModel;\n}();\n\nexports.default = AdModel;\n\n//# sourceURL=webpack:///./src/js/models/AdModel.js?");
+eval("\n\n//# sourceURL=webpack:///./src/js/models/impresions_model.js?");
+
+/***/ }),
+
+/***/ "./src/js/models/revenue_model.js":
+/*!****************************************!*\
+  !*** ./src/js/models/revenue_model.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Revenue = function () {\n  function Revenue(total, byPhone, byTablet) {\n    _classCallCheck(this, Revenue);\n\n    this.total = total;\n    this.byPhone = byPhone;\n    this.byTablet = byTablet;\n  }\n\n  _createClass(Revenue, [{\n    key: 'consoleName',\n    value: function consoleName() {\n      console.log('Revenue total: ' + this.total + '.');\n      console.log('Revenue by phone: ' + this.byPhone + '.');\n      console.log('Revenue by tablet: ' + this.byTablet + '.');\n    }\n  }]);\n\n  return Revenue;\n}();\n\nexports.default = Revenue;\n\n//# sourceURL=webpack:///./src/js/models/revenue_model.js?");
+
+/***/ }),
+
+/***/ "./src/js/models/visits_model.js":
+/*!***************************************!*\
+  !*** ./src/js/models/visits_model.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n//# sourceURL=webpack:///./src/js/models/visits_model.js?");
 
 /***/ })
 
