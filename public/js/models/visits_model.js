@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n//# sourceURL=webpack:///./src/js/models/visits_model.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Visits = function () {\n  function Visits(total, byPhone, byTablet) {\n    _classCallCheck(this, Visits);\n\n    this.total = total;\n    this.byPhone = byPhone;\n    this.byTablet = byTablet;\n  }\n\n  _createClass(Visits, [{\n    key: 'showDataInConsole',\n    value: function showDataInConsole() {\n      console.log('Visits total: ' + this.total + '.');\n      console.log('Visits by phone: ' + this.byPhone + '.');\n      console.log('Visits by tablet: ' + this.byTablet + '.');\n    }\n  }]);\n\n  return Visits;\n}();\n\nexports.default = Visits;\n\n//# sourceURL=webpack:///./src/js/models/visits_model.js?");
 
 /***/ })
 
