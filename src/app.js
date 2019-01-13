@@ -26,6 +26,6 @@ initialize.then((dbData) => {
 }).catch((reason) => {
     console.log("ERROR - initialize::catch::reason: " + reason);
 });
-//services (model mapping...) 
-//presentation (use of data models, d3.js...)    
+
+export {initialize};
  
