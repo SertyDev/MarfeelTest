@@ -1,11 +1,13 @@
 'use strict';
 
 class Visits {
-    constructor(total, byPhone, byTablet) {
-      this.total = total;
-      this.byPhone = byPhone;
-      this.byTablet = byTablet;
-    }
+  constructor(title, order, byPhone, byTablet, total) {
+    this.Title = title;
+    this.Order = order;
+    this.ByPhone = byPhone;
+    this.ByTablet = byTablet;
+    this.Total = total;
+  }
 
     showDataInConsole() {
       console.log('Visits total: ' + this.total + '.');

@@ -15,7 +15,7 @@ const getDatabaseByName = (databaseName) => {
 };
 
 class FirebaseService {
-    static get getDatabaseByName(databaseName){
+    static getDatabaseByName(databaseName){
         return getDatabaseByName(databaseName);
     }    
 }

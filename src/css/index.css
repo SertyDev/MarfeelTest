@@ -1,2 +1,138 @@
 
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: sans-serif;
+}
 
+.main-content{
+    height: 100%;
+}
+
+.app-content{
+    padding: 10% 10%;
+}
+
+.pie-chart{
+    position: relative;
+    height: 38vh;
+}
+
+.header-chart{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+}
+
+.title-chart{
+    display: block;
+    text-transform: uppercase;
+    color: rgba(128,128,128, 0.8);
+    margin-bottom: 1%;
+}
+
+.total-chart{
+    display: block;
+    font-size: 150%;
+}
+
+.svg-chart{
+    width: 100%;
+    height: 100%;
+}
+
+.g-chart{
+
+}
+
+.bottom-chart{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid rgba(128,128,128, 0.5);
+}
+
+.device-info{
+    display: inline-block;
+    width: 49%;
+}
+
+.device-info-left > div{
+
+}
+
+.device-info-right > div{
+    text-align: right;
+}
+
+.lbl-device{
+    display: block;
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.lbl-device-smartphone-revenue{
+    color: #3B6B15;
+}
+
+.lbl-device-tablet-revenue{
+    color: #8BD145;
+}
+
+.lbl-device-smartphone-impresions{
+    color: #2D5066;
+}
+
+.lbl-device-tablet-impresions{
+    color: #72C9E2;
+}
+
+.lbl-device-smartphone-visits{
+    color: #BB5620;
+}
+
+.lbl-device-tablet-visits{
+    color: #F0C42F;
+}
+
+.device-details{
+
+}
+
+.device-percent{
+    margin-right: 3%;
+}
+
+.device-data{
+    color: rgba(128,128,128, 0.8);
+}
+
+/* RESPONSIVE - large devices */
+@media only screen and (min-width: 600px) {
+    .pie-chart{
+        display: inline-block;
+        width: 27%;
+        margin: 0 3%;
+    }
+
+    .header-chart{
+        top: 35%;
+    }
+
+    .header-chart .title-chart{
+        font-size: 130%;
+        font-weight: bold;
+    }
+
+    .header-chart .total-chart{
+        font-size: 190%;
+        font-weight: bold;
+    }
+
+    .bottom-chart{
+        border-bottom: 3px solid rgba(128,128,128, 0.3);
+    }
+  }

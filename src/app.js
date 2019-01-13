@@ -1,6 +1,6 @@
-import Constants from '../config/app_constants';
-import FirebaseService from '../services/firebase_service';
-import DataService from '../services/data_service';
+import Constants from './config/app_constants';
+import FirebaseService from './services/firebase_service';
+import AppService from './services/app_service';
 
 // The function "initialize" is in charge to connect to de database and get the data needed to mount the app functionality
 const initialize = new Promise((resolve, reject) => {
@@ -12,16 +12,20 @@ const initialize = new Promise((resolve, reject) => {
         }
     }).catch((reason) => {
         console.log("ERROR - (def)initialize::getDatabaseByName::catch::reason: " + reason);
-    });
+    }); 
 });
 
 initialize.then((dbData) => {
-    console.log(dbData);
-    DataService.generateChartModels(dbData).then((models) => {
-        console.log(models);
+    AppService.createChartModels(dbData).then((models) => {
+        let modelsByOrder = AppService.sortModelsByOrder(models);
+        Object.keys(modelsByOrder).forEach(function(modelIndex){
+            let chartModel = modelsByOrder[modelIndex];
+            AppService.createPieChart(chartModel, "#AppContent")
+        })
     });
 }).catch((reason) => {
     console.log("ERROR - initialize::catch::reason: " + reason);
 });
-//services (model mapping...)
-//presentation (use of data models, d3.js...)
+//services (model mapping...) 
+//presentation (use of data models, d3.js...)    
+ 
