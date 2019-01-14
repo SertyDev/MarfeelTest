@@ -8,14 +8,6 @@ class Impresions {
       this.ByTablet = byTablet;
       this.Total = total;
     }
-
-
-    
-    showDataInConsole() {
-      console.log('Impresions total: ' + this.total + '.');
-      console.log('Impresions by phone: ' + this.byPhone + '.');
-      console.log('Impresions by tablet: ' + this.byTablet + '.');
-    }
   }
 
   export default Impresions;

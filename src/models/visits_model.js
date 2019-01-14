@@ -8,12 +8,6 @@ class Visits {
     this.ByTablet = byTablet;
     this.Total = total;
   }
-
-    showDataInConsole() {
-      console.log('Visits total: ' + this.total + '.');
-      console.log('Visits by phone: ' + this.byPhone + '.');
-      console.log('Visits by tablet: ' + this.byTablet + '.');
-    }
-  }
+}
 
   export default Visits;

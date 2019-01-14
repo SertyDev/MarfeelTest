@@ -1,6 +1,4 @@
 
-
-
 const databaseName = 'App_Ad_Data',
     Impresions = 'Impresions',
     Revenue = 'Revenue',

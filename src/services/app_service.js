@@ -66,10 +66,6 @@ const sortModelsByOrder = (jsonModels) => {
     return resModel;
 }
 
-// sortableModels.sort(function(a, b) {
-//     return a[1] - b[1];
-// });
-
 const createPieChart = (dataModel, containerSelector) => {
     console.log("createPieChart");
     let charts = []
@@ -106,17 +102,20 @@ const createPieChart = (dataModel, containerSelector) => {
     elmChart.append(elmChartHeader);
     elmChartHeader.append(elmTitleChart);
     elmChartHeader.append(elmTotalChart);
-    elmChart.append(createElementFromHTML(BottomChart(dataModel.Title.toLowerCase(), "Tablet", byTabletPercent, dataModel.ByTablet, "Smartphone", byPhonePercent, dataModel.ByPhone)));
-    
-    
-
+    elmChart.append(createElementFromHTML(BottomChart(
+        dataModel.Title.toLowerCase(),
+        "Tablet",
+        byTabletPercent,
+        dataModel.ByTablet,
+        "Smartphone",
+        byPhonePercent,
+        dataModel.ByPhone)));
 }
 
 const createElementFromHTML = (strHtml) => {
     var div = document.createElement('div');
     div.innerHTML = strHtml.trim();
 
-  // Change this to div.childNodes to support multiple top-level nodes
   return div.firstChild; 
 }
 

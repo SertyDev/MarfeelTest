@@ -26,6 +26,4 @@ initialize.then((dbData) => {
 }).catch((reason) => {
     console.log("ERROR - initialize::catch::reason: " + reason);
 });
-
-export {initialize};
  

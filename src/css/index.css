@@ -43,10 +43,6 @@ body{
     height: 100%;
 }
 
-.g-chart{
-
-}
-
 .bottom-chart{
     position: absolute;
     bottom: 10%;
@@ -58,10 +54,6 @@ body{
 .device-info{
     display: inline-block;
     width: 49%;
-}
-
-.device-info-left > div{
-
 }
 
 .device-info-right > div{
@@ -96,10 +88,6 @@ body{
 
 .lbl-device-tablet-visits{
     color: #F0C42F;
-}
-
-.device-details{
-
 }
 
 .device-percent{
