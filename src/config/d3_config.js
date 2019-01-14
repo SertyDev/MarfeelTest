@@ -14,7 +14,6 @@ d3.eesur.singleValueDonut = function createDonut () {
   var translateHeight = null;
 
   function exports (selection) {
-    console.log("createDonut");
     selection.each(function (chartData) {
       
       var total = chartData.Total;
@@ -56,7 +55,6 @@ d3.eesur.singleValueDonut = function createDonut () {
       
       var pies = d3.pie().sort(null)([byPhonePercent, byTabletPercent])
 
-      console.log("width: " + width);
       var arc = d3.arc()
         .innerRadius(innnerRadius)
         .outerRadius(outerRadius)

@@ -11,7 +11,6 @@ const createChartModels = (jsonData) => {
     return new Promise((resolve, rejects) => {
         let models = [];
         Object.keys(jsonData).forEach(function(chartName){
-            console.log(chartName);
             switch(chartName){
                 case Constants.Impresions:
                     models.push(mapImpresionsToModel(jsonData[chartName]));
@@ -67,7 +66,6 @@ const sortModelsByOrder = (jsonModels) => {
 }
 
 const createPieChart = (dataModel, containerSelector) => {
-    console.log("createPieChart");
     let charts = []
     // create the dom
     d3.select(containerSelector).append('div')
@@ -128,6 +126,17 @@ class AppService {
     }
     static createPieChart(dataModel, containerSelector){
         return createPieChart(dataModel, containerSelector);
+    }
+
+    //TESTING USAGE
+    static mapImpresionsToModel(impresionsData){
+        return mapImpresionsToModel(impresionsData);
+    }
+    static mapRevenueToModel(revenueData){
+        return mapRevenueToModel(revenueData);
+    }
+    static mapVisitsToModel(visitsData){
+        return mapVisitsToModel(visitsData);
     }
 }
 

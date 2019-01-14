@@ -11,15 +11,21 @@ module.exports = function(config) {
       },
       webpack: {
           module: {
-              loaders: [
+              rules: [
                   { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' }
               ]
           },
-          watch: true
+          watch: true,
+          mode: 'development'
       },
       webpackServer: {
           noInfo: true
       },
-      port: 9876
+      port: 9876,
+      plugins : [
+        require('karma-webpack'),
+        'karma-jasmine',
+        'karma-chrome-launcher'
+    ]
   });
 };

@@ -19,6 +19,7 @@ var config = {
             }
         ]
     },
+    
 };
 
 var appConfig = Object.assign({}, config, {
@@ -32,30 +33,6 @@ var appConfig = Object.assign({}, config, {
     },
 });
 
-// var cssConfig = Object.assign({}, config, {
-//     mode: 'development',
-//     entry: {
-//         index: "./src/css/index.css"
-//     },
-//     output: {
-//         path: path.resolve(__dirname, "public/app"),
-//         filename: "[name].css"
-//     },
-// });
-
-// var modelsConfig = Object.assign({}, config,{
-//     mode: 'development',
-//     entry: {
-//         impresions_model: "./src/js/models/impresions_model.js",
-//         revenue_model: "./src/js/models/revenue_model.js",
-//         visits_model: "./src/js/models/visits_model.js",
-//     },
-//     output: {
-//         path: path.resolve(__dirname, "public/js/models"),
-//         filename: "[name].js"
-//     },
-// });
-
 module.exports = [
-    appConfig//, modelsConfig
+    appConfig
 ];
